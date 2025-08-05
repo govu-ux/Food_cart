@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delivery Tracker | Bangalore Bites</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/cart.js" defer></script>
+  <style>
+    /* Inline styles for delivery page for simplicity, could be moved to a delivery.css */
+    .tracker-container {
+      max-width: 800px;
+      margin: 100px auto 80px;
+      padding: 30px;
+      background: #fff3e0; /* Light orange background */
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tracker-container h2 {
+      text-align: center;
+      color: #d92f2f;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 20px; /* Padding for line to extend */
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1; /* Ensure circles are above line */
+    }
+
+    .step:not(:last-child)::before { /* Line between steps */
+      content: '';
+      width: calc(100% - 40px); /* Adjust width to connect circles */
+      height: 4px;
+      background: #ddd;
+      position: absolute;
+      top: 20px;
+      left: calc(50% + 20px); /* Start from center of current circle + half circle width */
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    .step.active:not(:last-child)::before {
+      background: #d92f2f; /* Active line color */
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border: 3px solid #d92f2f;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #d92f2f;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .step.active .circle {
+      background: #d92f2f; /* Active circle background */
+      color: #fff; /* Active circle text color */
+    }
+
+    .step p {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+
+    .step.active p {
+      color: #d92f2f; /* Active step text color */
+    }
+
+    .truck {
+      position: absolute;
+      bottom: 10px;
+      left: -60px;
+      width: 60px;
+      animation: moveTruck 8s linear infinite;
+    }
+
+    @keyframes moveTruck {
+      0% { left: -60px; }
+      100% { left: calc(100% + 60px); }
+    }
+
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #d92f2f;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      z-index: 999;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .chat-button:hover {
+      background: #c72130;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .tracker-container {
+        margin: 80px auto 60px;
+        padding: 20px;
+      }
+
+      .tracker-container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .steps {
+        flex-wrap: wrap; /* Allow steps to wrap */
+        justify-content: center;
+        padding: 0;
+      }
+
+      .step {
+        flex: 0 0 50%; /* Two steps per row */
+        margin-bottom: 20px;
+      }
+
+      .step:not(:last-child)::before {
+        display: none; /* Hide horizontal line on small screens */
+      }
+
+      .truck {
+        width: 50px;
+      }
+
+      .chat-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Bangalore Bites</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        🛒 <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Delivery Tracker -->
+  <div class="tracker-container">
+    <h2>Tracking Your Order</h2>
+    <div class="steps">
+      <div class="step active">
+        <div class="circle">1</div>
+        <p>Order Confirmed</p>
+      </div>
+      <div class="step active">
+        <div class="circle">2</div>
+        <p>Preparing</p>
+      </div>
+      <div class="step active">
+        <div class="circle">3</div>
+        <p>Out for Delivery</p>
+      </div>
+      <div class="step">
+        <div class="circle">4</div>
+        <p>Delivered</p>
+      </div>
+    </div>
+    <img src="images/truck.gif" class="truck" alt="Delivery truck animation" />
+  </div>
+
+  <!-- Floating Chat -->
+  <button class="chat-button" onclick="alert('Connecting to support...')">
+    💬 Chat Now
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Bangalore Bites | LIC Colony, Bangalore | 9901389598</p>
+  </footer>
+
+  <script src="js/cart.js"></script> <!-- Ensure cart badge updates -->
+</body>
+</html>

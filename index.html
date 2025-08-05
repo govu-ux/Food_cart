@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bangalore Bites | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Bangalore Bites</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        🛒 <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <section class="hero-section">
+      <h1>Welcome to Bangalore Bites</h1>
+      <p>Authentic Indian Chats, Chinese Flavors, and Fast Food Treats – all in one place!</p>
+      <img src="images/hero-food.jpg" alt="Delicious food spread" class="hero-image" />
+      <a href="menu.html" class="btn hero-btn">Explore Our Menu</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Bangalore Bites | LIC Colony, Bangalore | 9901389598</p>
+  </footer>
+
+  <script src="js/cart.js"></script> <!-- Ensure cart badge updates -->
+</body>
+</html>
+
+<style>
+  /* Specific styles for the homepage */
+  .home-main {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+    color: #d92f2f;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  }
+
+  .hero-section p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .hero-btn {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border-radius: 30px; /* Pill shape */
+    background: #d92f2f;
+    color: white;
+    text-decoration: none;
+  }
+
+  .hero-btn:hover {
+    background: #c72130;
+    transform: translateY(-3px);
+  }
+
+  /* Responsive adjustments for homepage */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.8rem;
+    }
+
+    .hero-section p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-image {
+      margin-bottom: 30px;
+    }
+
+    .hero-btn {
+      padding: 12px 25px;
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-section h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero-section p {
+      font-size: 1rem;
+    }
+  }
+</style>

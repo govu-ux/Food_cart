@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu | Bangalore Bites</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" /> <!-- Link to specific menu styles -->
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Bangalore Bites</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        🛒 <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <h2 class="menu-title">Our Menu</h2>
+
+    <div class="menu-category">🥗 Indian Chats</div>
+    <div class="menu-grid">
+      <div class="menu-item" data-name="Pani Puri" data-price="40">
+        <img src="images/pani_puri.jpg" alt="Pani Puri" />
+        <h3>Pani Puri</h3>
+        <p>Crunchy shells filled with spicy mint water, potatoes, and chickpeas.</p>
+        <span class="price">₹40</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Bhel Puri" data-price="50">
+        <img src="images/bhel.jpg" alt="Bhel Puri" />
+        <h3>Bhel Puri</h3>
+        <p>Puffed rice tossed with tangy tamarind chutney, chopped onions, and tomatoes.</p>
+        <span class="price">₹50</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Sev Puri" data-price="55">
+        <img src="images/sev_puri.jpg" alt="Sev Puri" />
+        <h3>Sev Puri</h3>
+        <p>Crispy flat puris topped with potatoes, chutneys, and a generous amount of sev.</p>
+        <span class="price">₹55</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Dahi Puri" data-price="60">
+        <img src="images/dahi_puri.jpg" alt="Dahi Puri" />
+        <h3>Dahi Puri</h3>
+        <p>Puri filled with potatoes, chickpeas, sweet yogurt, and various chutneys.</p>
+        <span class="price">₹60</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-category">🍜 Chinese Delights</div>
+    <div class="menu-grid">
+      <div class="menu-item" data-name="Gobi Manchurian" data-price="80">
+        <img src="images/gobi.jpg" alt="Gobi Manchurian" />
+        <h3>Gobi Manchurian</h3>
+        <p>Spicy & crispy cauliflower florets tossed in a savory and tangy Manchurian sauce.</p>
+        <span class="price">₹80</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Veg Noodles" data-price="70">
+        <img src="images/noodles.jpg" alt="Veg Noodles" />
+        <h3>Veg Noodles</h3>
+        <p>Classic stir-fried noodles with fresh vegetables and a hint of soy sauce.</p>
+        <span class="price">₹70</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Paneer Chilli" data-price="95">
+        <img src="images/paneer_chilli.jpg" alt="Paneer Chilli" />
+        <h3>Paneer Chilli</h3>
+        <p>Cubes of paneer (Indian cheese) stir-fried with bell peppers, onions, and spicy sauces.</p>
+        <span class="price">₹95</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Veg Fried Rice" data-price="75">
+        <img src="images/fried_rice.jpg" alt="Veg Fried Rice" />
+        <h3>Veg Fried Rice</h3>
+        <p>Flavorful fried rice with mixed vegetables, seasoned to perfection.</p>
+        <span class="price">₹75</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-category">🍔 Fast Food Favorites</div>
+    <div class="menu-grid">
+      <div class="menu-item" data-name="Veg Burger" data-price="60">
+        <img src="images/burger.jpg" alt="Veg Burger" />
+        <h3>Veg Burger</h3>
+        <p>Juicy vegetable patty loaded with fresh lettuce, tomatoes, and special sauces.</p>
+        <span class="price">₹60</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Cheese Pizza" data-price="90">
+        <img src="images/pizza.jpg" alt="Cheese Pizza" />
+        <h3>Cheese Pizza</h3>
+        <p>Classic cheesy delight with a generous layer of mozzarella and a crispy crust.</p>
+        <span class="price">₹90</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="French Fries" data-price="45">
+        <img src="images/fries.jpg" alt="French Fries" />
+        <h3>French Fries</h3>
+        <p>Crispy golden fries, perfectly salted and served hot.</p>
+        <span class="price">₹45</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="menu-item" data-name="Veg Sandwich" data-price="50">
+        <img src="images/sandwich.jpg" alt="Veg Sandwich" />
+        <h3>Veg Sandwich</h3>
+        <p>Freshly prepared sandwich with assorted vegetables and a creamy spread.</p>
+        <span class="price">₹50</span>
+        <div class="order-controls">
+          <button class="minus">–</button>
+          <span class="qty">0</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Bangalore Bites | LIC Colony, Bangalore | 9901389598</p>
+  </footer>
+
+</body>
+</html>

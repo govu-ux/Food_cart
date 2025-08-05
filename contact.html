@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Bangalore Bites</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" /> <!-- Link to specific contact styles -->
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Bangalore Bites</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        🛒 <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Details + Map -->
+      <div class="contact-info-wrapper">
+        <p><strong>Phone:</strong> <a href="tel:9901389599">9901389598</a></p>
+        <p><strong>Email:</strong> <a href="mailto:govgaming04@gmail.com">govgaming04@gmail.com</a></p>
+        <p><strong>Location:</strong> LIC Colony, Bangalore, India</p>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=LIC+Colony,+Bangalore,+India&output=embed"
+            width="100%" height="250" style="border:0;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Bangalore Bites | LIC Colony, Bangalore | 9901389598</p>
+  </footer>
+
+  <script src="js/cart.js"></script> <!-- Ensure cart badge updates -->
+</body>
+</html>

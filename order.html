@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order | Bangalore Bites</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/order.css" /> <!-- Link to specific order styles -->
+  <script src="js/order.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Bangalore Bites</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="cart-icon">
+        🛒 <span id="cart-badge">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Order Summary -->
+  <section class="order-page">
+    <h2>Your Order Summary</h2>
+
+    <div class="order-table-container">
+      <table class="order-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="order-list">
+          <!-- Order items will be rendered here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="order-total">
+      <strong>Total:</strong> ₹<span id="total-bill">0</span>
+    </div>
+
+    <!-- Delivery or Pickup -->
+    <div class="delivery-options">
+      <label><input type="radio" name="delivery" value="delivery" checked> Delivery</label>
+      <label><input type="radio" name="delivery" value="pickup"> Pickup</label>
+    </div>
+
+    <!-- Address Input -->
+    <div class="address-section">
+      <textarea id="address" placeholder="Enter your delivery address..." rows="4"></textarea>
+    </div>
+
+    <!-- Payment -->
+    <div class="payment-method">
+      <label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label>
+      <label><input type="radio" name="payment" value="online"> Pay Online (Coming Soon)</label>
+    </div>
+
+    <!-- Confirm Button -->
+    <button class="confirm-btn" onclick="placeOrder()">Place Order</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Bangalore Bites | LIC Colony, Bangalore | 9901389598</p>
+  </footer>
+
+</body>
+</html>

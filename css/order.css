@@ -1,0 +1,177 @@
+/* css/order.css */
+
+.order-page {
+  padding: 60px 20px;
+  background: #fffdf8; /* Light background */
+  max-width: 900px; /* Max width for order summary */
+  margin: 0 auto 80px; /* Margin at bottom for footer */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.order-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #d92f2f; /* Primary red */
+  margin-bottom: 40px;
+}
+
+.order-table-container {
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table thead {
+  background: #f8d7da; /* Light red header background */
+  color: #721c24; /* Darker red text */
+}
+
+.order-table th,
+.order-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee; /* Light border */
+}
+
+.order-table th {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.order-table td {
+  color: #333;
+  font-size: 1rem;
+}
+
+.order-table tbody tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+/* Message for empty cart */
+.empty-cart-message {
+  text-align: center;
+  padding: 30px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.order-total {
+  font-size: 1.5rem; /* Larger total */
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 30px;
+  color: #d92f2f; /* Primary red for total */
+  padding-right: 10px; /* Align with table content */
+}
+
+.delivery-options,
+.payment-method {
+  display: flex;
+  gap: 25px; /* Space between options */
+  margin-bottom: 30px;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.delivery-options label,
+.payment-method label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.delivery-options input[type="radio"],
+.payment-method input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #d92f2f; /* Highlight radio button */
+  width: 18px;
+  height: 18px;
+}
+
+.address-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#address {
+  width: 100%;
+  max-width: 500px; /* Limit width for readability */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 100px;
+  resize: vertical;
+  background: #fefefe;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#address:focus {
+  border-color: #d92f2f;
+  box-shadow: 0 0 0 3px rgba(217, 47, 47, 0.1);
+  outline: none;
+}
+
+.confirm-btn {
+  display: block; /* Center button */
+  margin: 0 auto;
+  padding: 15px 40px; /* Larger button */
+  font-size: 1.2rem;
+  border-radius: 30px; /* Pill shape */
+  background: #d92f2f;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background: #c72130;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .order-page {
+    padding: 40px 15px;
+  }
+
+  .order-page h2 {
+    font-size: 2rem;
+  }
+
+  .order-table th,
+  .order-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .order-total {
+    font-size: 1.3rem;
+  }
+
+  .delivery-options,
+  .payment-method {
+    flex-direction: column; /* Stack options */
+    gap: 15px;
+    align-items: flex-start; /* Align to left */
+  }
+
+  #address {
+    padding: 12px;
+  }
+
+  .confirm-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+}

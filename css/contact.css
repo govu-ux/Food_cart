@@ -1,0 +1,120 @@
+/* css/contact.css */
+
+.contact-section {
+  padding: 60px 20px 80px; /* Adjusted padding */
+  max-width: 1000px; /* Max width for content */
+  margin: auto;
+  background: #fffdfa; /* Light background */
+  color: #333;
+  border-radius: 12px; /* Soft rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.2rem; /* Consistent heading size */
+  color: #d92f2f; /* Primary red */
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Consistent gap */
+  justify-content: center;
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  min-width: 300px;
+  background: #fff; /* White background for form */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd; /* Lighter border */
+  font-size: 1rem;
+  background: #fefefe; /* Very light background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d92f2f; /* Highlight on focus */
+  box-shadow: 0 0 0 3px rgba(217, 47, 47, 0.1); /* Soft focus glow */
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 120px;
+}
+
+.contact-info-wrapper {
+  flex: 1;
+  min-width: 300px;
+  background: #fff0f0; /* Light red background */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.contact-info-wrapper p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-info-wrapper strong {
+  color: #d92f2f; /* Highlight labels */
+}
+
+.contact-info-wrapper a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info-wrapper a:hover {
+  color: #d92f2f;
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures iframe corners are rounded */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.map-container iframe {
+  display: block; /* Remove extra space below iframe */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px 60px;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form-wrapper,
+  .contact-info-wrapper {
+    min-width: unset; /* Allow flex items to shrink */
+    width: 100%; /* Take full width on small screens */
+  }
+}
